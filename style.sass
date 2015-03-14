@@ -1,0 +1,216 @@
+@import compass/css3
+@import compass/reset
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=cyrillic,latin)
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300)
+
+$experimental-support-for-svg: true
+html, body
+  background-color: #2b2d31
+  +filter-gradient(#2b2d31, #1b1c1d, vertical)
+  +background-image(linear-gradient(top, #2b2d31 0%,#1b1c1d 100%))
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif
+  font-size: 16px
+  color: white
+  // background-image: image-url('/img/pattern.png')
+  // max-width: 900px
+  // margin: 0 auto
+
+.oswald
+  font-family: 'Oswald', 'Open Sans', Helvetica, Arial, sans-serif
+
+.loadingOverlay
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: #2b2d31
+  +filter-gradient(#2b2d31, #1b1c1d, vertical)
+  +background-image(linear-gradient(top, #2b2d31 0%,#1b1c1d 100%))
+  top: 0
+  left: 0
+  z-index: 1000
+  text-align: center
+
+  .middle
+    width: 250px
+    margin: 0 auto
+
+    span.message
+      display: inline-block
+      font-size: 12px
+      margin-top: 20px
+      text-transform: uppercase
+      letter-spacing: 2px
+
+header
+  position: relative
+  width: 100%
+  background: image-url('/img/header_bg.jpg') top right no-repeat
+  +background-size(cover)
+  min-height: 400px
+
+  &.retina
+    background-image: image-url('/img/header_bg@2x.jpg')
+
+  .container
+    width: 90%
+    margin: 0 auto
+
+  .top_level
+    padding-top: 45px
+
+    .logo
+      width: 160px
+      height: 96px
+      background: image-url('/img/logo.png') no-repeat
+      +background-size(cover)
+
+      &.retina
+        background-image: image-url('/img/logo@2x.png')
+
+  .bottom_level
+    position: absolute
+    bottom: 50px
+
+    h1
+      font-size: 48px
+      font-weight: 300
+      line-height: 56px
+      text-transform: uppercase
+      margin-top: 140px
+
+    button
+      margin-top: 35px
+      background: transparent
+      border: 1px solid white
+      padding: 15px 25px
+      font-size: 18px
+      color: white
+      text-transform: uppercase
+      cursor: pointer
+      +transition(all 0.2s ease-out)
+
+      &:hover
+        background: white
+        color: #2B2D31
+
+.about
+  .lvl
+    white-space: nowrap
+
+  .block
+    display: inline-block
+    vertical-align: top
+    background: white
+    width: 50%
+    height: 300px
+    color: black
+    padding: 25px 40px
+    white-space: normal
+    +box-sizing(border-box)
+    +transition(all 3s ease-in-out)
+
+    &.pic1
+      background: image-url('/img/descr1.jpg') top center no-repeat
+      +background-size(cover)
+    &.pic2
+      background: image-url('/img/descr2.jpg') top center no-repeat
+      +background-size(cover)
+    &.pic3
+      background: image-url('/img/descr3.jpg') top center no-repeat
+      +background-size(cover)
+
+    &.pic1:hover, &.pic2:hover, &.pic3:hover
+      background-position: bottom center
+
+    h3
+      font-size: 26px
+      text-transform: uppercase
+      font-weight: bold
+      margin-bottom: 20px
+
+    p
+      font-size: 14px
+      line-height: 24px
+      overflow: auto
+      max-height: 80%
+
+      span.break
+        display: block
+        margin-top: 10px
+
+h2
+  text-align: center
+  font-size: 34px
+  letter-spacing: 2px
+  text-transform: uppercase
+  color: white
+  margin-top: 100px
+  margin-bottom: 30px
+
+.gallery
+  max-width: 100%
+
+#catalogue
+  margin: 0 auto
+  &:hover .lookbookItem
+    opacity: 0.7
+
+  .lookbookItem
+    cursor: pointer
+    +transition(all 0.2s ease-in-out)
+    &:hover
+      opacity: 1
+
+    .inner
+      position: relative
+
+      .priceBlock
+        position: absolute
+        bottom: 0
+        text-align: right
+        +box-sizing(border-box)
+        background: rgba(0, 0, 0, 0.4)
+        padding: 5px 10px
+        width: 100%
+        font-size: 18px
+
+        .rub
+          opacity: 0.8
+          font-size: 16px
+          padding-left: 4px
+
+  img.item
+    max-width: 312px
+    opacity: 0
+
+#fit-width .masonry
+  margin: 0 auto
+
+.fotorama, .fotorama__wrap
+  margin: 0 auto
+
+.fotorama-wrapper
+  position: relative
+
+.manifiest_content_wrapper
+  background: rgba(0, 0, 0, 0.7)
+  padding: 15px
+  position: absolute
+  bottom: 90px
+  left: 20px
+  z-index: 100
+  display: none
+
+  .manifiest_content
+    max-width: 500px
+    min-width: 100px
+    width: 100%
+    max-height: 450px
+    line-height: 24px
+    overflow: auto
+
+    .name
+      font-size: 24px
+      line-height: 36px
+      font-weight: bold
+      margin-bottom: 10px

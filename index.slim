@@ -1,0 +1,73 @@
+doctype html
+html lang='en'
+  head
+    title Craftman
+    meta charset='UTF-8'
+    link rel="icon" type="image/png" href="img/favicon.png"
+
+    link rel='stylesheet' href='fotorama.css'
+    link rel='stylesheet' href='style.css'
+
+    script src='lookbookItems.js'
+    script src='manifiests.js'
+    script src='jq.js'
+    script src='msnr.js'
+    script src='krutilka.js'
+    script src='fotorama.min.js'
+    script src='script.js'
+  body.2x
+    .loadingOverlay: .middle
+      #krutilka
+      span.message#loadingMessage Загружаю лукбук
+    .__lookbookItemContainer
+      .lookbookItemContainer
+        .innerWrapper
+          .leftside
+          .rightside
+      .lookbookItemOverlay
+    header.2x: .container
+      .top_level
+        .networks
+        .logo.2x
+      .bottom_level
+        h1 Искусство&nbsp;<br/>быть&nbsp;<br/>собой
+        button#more style="opacity: 0" Смотреть лукбук
+    .about
+      .lvl
+        .block.pic1
+        .block.pic2
+      .lvl
+        .block.pic3
+        .block
+          h3.oswald Craftman
+          p Крафтман — это марка одежды и сообщество друзей. Мы делаем одежду «для своих», потому что хотим видеть людей красивыми.<span class="break">Мы производим одежду из качественного сырья: принт остается ярким и после тысячи стирок, а ткань приятно ощущается на теле. Шьем ограниченным тиражом на фабрике в Москве.</span><span class="break">Мы не боимся быть собой. В эпоху подмены понятий, грязи с телеэкранов и победы формы над содержанием мы делаем выбор в пользу чистого искусства.</span>
+    .gallery
+      h2 Lookbook
+      #catalogue
+        ruby:
+          def catalogue
+            Dir.glob('img/lookbook/*').select{ |e| File.file? e }
+          end
+        - catalogue().each do |item|
+          .lookbookItem: .inner
+            .priceBlock
+              span.p
+              span.rub ₽
+            img.item src="#{item}"
+    .manifiests
+      h2 Тусовка
+      .fotorama-wrapper
+        .manifiest_content_wrapper#manifiest_data: .manifiest_content
+          .name
+          .text
+        .fotorama
+          ruby:
+            def manifiest
+              Dir.glob('img/manifiest/*').select{ |e| File.file? e }
+            end
+          - manifiest().each do |item|
+            img src="#{item}" data-mid="#{File.basename(item, '.jpg')}"
+
+    footer
+      h2 Магазин
+
