@@ -15,6 +15,9 @@ html, body
   // max-width: 900px
   // margin: 0 auto
 
+body
+  overflow: hidden
+
 .oswald
   font-family: 'Oswald', 'Open Sans', Helvetica, Arial, sans-serif
 
@@ -192,6 +195,17 @@ h2
 .fotorama-wrapper
   position: relative
 
+p.crew
+  width: 80%
+  margin: 0 auto
+  text-align: center
+  font-size: 14px
+  line-height: 26px
+  margin-bottom: 40px
+
+  a
+    color: rgb(161, 187, 239)
+
 .manifiest_content_wrapper
   background: rgba(0, 0, 0, 0.7)
   padding: 15px
@@ -214,3 +228,221 @@ h2
       line-height: 36px
       font-weight: bold
       margin-bottom: 10px
+
+.__lookbookItemContainer
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 500
+  overflow: auto
+
+  .lookbookItemContainer
+    position: absolute
+    width: 80%
+    background: white
+    color: black
+    z-index: 2
+    min-height: 550px
+    max-height: 650px
+
+    .successMessage
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: white
+      text-align: center
+      display: none
+      z-index: 100
+
+      .info
+        padding-top: 24%
+        width: 400px
+        margin: 0 auto
+        display: inline-block
+
+        b
+          font-size: 24px
+          line-height: 46px
+
+        button
+          border: none
+          background: rgb(134, 158, 99)
+          font-size: 18px
+          color: white
+          margin-top: 10px
+          padding: 10px 14px
+          cursor: pointer
+          outline: none
+          +transition(all 0.2s ease-in-out)
+
+          &:hover
+            background: rgb(123, 148, 87)
+
+    .fotorama__thumb-border
+      border-color: black
+
+    .fotorama, .fotorama__wrap
+      margin: 0
+
+    .innerWrapper
+      +box-sizing(border-box)
+      padding: 30px 40px
+
+      .leftside, .rightside
+        display: inline-block
+        vertical-align: top
+        width: 40%
+
+      .rightside
+        width: 60%
+        height: 100%
+
+        h4.title
+          font-size: 24px
+          font-weight: bold
+          margin-bottom: 14px
+
+        p.details
+          font-size: 14px
+          line-height: 24px
+          height: 220px
+          overflow: auto
+
+        .price
+          display: inline-block
+          vertical-align: bottom
+          margin-bottom: 3px
+          font-size: 30px
+          margin-right: 10px
+
+          p.rub
+            opacity: 0.6
+
+        ul.sizes
+          display: inline-block
+          margin-top: 20px
+
+          > li
+            display: inline-block
+            vertical-align: top
+            padding: 10px
+            background: rgb(233, 232, 240)
+            margin-right: 2px
+            font-size: 14px
+            text-transform: uppercase
+            cursor: pointer
+            color: rgb(82, 82, 82)
+            border: 1px solid transparent
+
+            &.active
+              border: 1px solid rgb(82, 82, 82)
+              background: transparent
+              cursor: default
+
+        label
+          font-weight: bold
+          display: block
+          font-size: 12px
+          margin-top: 20px
+          margin-bottom: 10px
+
+        textarea
+          display: block
+          width: 100%
+          border: 1px solid rgb(213, 213, 213)
+          height: 100px
+          outline: none
+          resize: none
+          padding: 15px
+          +box-sizing(border-box)
+
+        button.sendRequest
+          color: white
+          background: black
+          border: 1px solid black
+          padding: 8px 14px
+          outline: none
+          font-size: 12px
+          text-transform: uppercase
+          letter-spacing: 2px
+          cursor: pointer
+          float: right
+          margin-top: 12px
+          +text-shadow(0px 1px 0px rgb(121, 112, 112))
+          +transition(all 0.05s ease-in-out)
+
+          &:hover, &:focus
+            background: rgb(76, 76, 76)
+            border-color: rgb(76, 76, 76)
+
+          &:active
+            background-color: #fff
+            color: black
+            border-color: black
+            +text-shadow(0 1 0 rgba(0, 0, 0, 0.1))
+
+        span.info
+          font-size: 12px
+          line-height: 16px
+          margin-top: 14px
+          display: block
+          color: rgb(71, 71, 71)
+
+  .lookbookItemOverlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.6)
+    +transition(all 0.4s ease-in-out)
+
+    &:hover
+      background-color: rgba(0, 0, 0, 0.1)
+
+footer
+  .inner_wrapper
+    width: 80%
+    margin: 0 auto
+    margin-top: 40px
+    margin-bottom: 90px
+
+    .leftside, .rightside
+      display: inline-block
+      vertical-align: top
+      width: 50%
+      +box-sizing(border-box)
+
+      img
+        max-width: 100%
+
+    .leftside
+      .shop
+        background: image-url('/img/descr3.jpg') top center no-repeat
+        height: 240px
+        +transition(all 4s ease-in-out)
+
+    .rightside
+      padding-left: 25px
+
+      p.info
+        font-size: 14px
+        line-height: 24px
+
+      a
+        display: block
+        color: rgb(175, 218, 255)
+        font-size: 18px
+        margin-top: 24px
+        text-decoration: none
+
+        span
+          border-bottom: 1px solid rgba(175, 218, 255, 0.8)
+
+  &:hover .shop
+    background-position: bottom center

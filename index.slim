@@ -21,9 +21,24 @@ html lang='en'
       span.message#loadingMessage Загружаю лукбук
     .__lookbookItemContainer
       .lookbookItemContainer
+        .successMessage
+          .info <b>Ваш заказ успешно размещен</b><br/>Менеджер свяжется с вами в ближайшее время<br/><br/><button>Вернуться к лукбуку</button>
         .innerWrapper
           .leftside
+            .fotorama
           .rightside
+            h4.title
+            p.details
+            .price
+              span.p
+              span.rub ₽
+            ul.sizes
+            input type="hidden" name="uid"
+            input type="hidden" name="size"
+            label for="#sendFormRequest" Контактная информация:
+            textarea.message#sendFormRequest name="usermessage" placeholder="Ваш телефон, электронная почта, ссылки на социальные сети"
+            button.sendRequest Отправить заявку
+            span.info Менеджер свяжется с вами для подтверждения заказа<br/>и обсуждения доставки и оплаты
       .lookbookItemOverlay
     header.2x: .container
       .top_level
@@ -31,7 +46,7 @@ html lang='en'
         .logo.2x
       .bottom_level
         h1 Искусство&nbsp;<br/>быть&nbsp;<br/>собой
-        button#more style="opacity: 0" Смотреть лукбук
+        button#more Смотреть лукбук
     .about
       .lvl
         .block.pic1
@@ -47,6 +62,7 @@ html lang='en'
         ruby:
           def catalogue
             Dir.glob('img/lookbook/*').select{ |e| File.file? e }
+            #["/img/lookbook/IMG_12653r.jpg"]
           end
         - catalogue().each do |item|
           .lookbookItem: .inner
@@ -56,11 +72,20 @@ html lang='en'
             img.item src="#{item}"
     .manifiests
       h2 Тусовка
+      p.crew
+        | Весь мир — театр. И люди в нем актеры. Главное, чтобы роли играли по-настоящему. С чувством. По-честному.
+        br
+        | Жалость берет, когда смотришь на потерявшихся на сцене. Станиславский тут ни при чем, потому что они сами не верят в свою игру.
+        br
+        | Бесповоротный упадок человечества наступит, когда люди забудут самое главное из искусств. Искусство быть собой.
+        | Именно поэтому мы целимся в вас микрофонами, господа. Маэстро и маэстрята. Актеры и актрисы. Волшебники большой сцены. Мы хотим рассказать о вас здесь и сейчас.
+        br
+        | Здесь мы публикуем манифесты — краткие выжимки из разговоров с нашими друзьями. Хотите подружиться? Пишите на <a href="mailto:craftman.info@gmail.com">craftman.info@gmail.com</a>.
       .fotorama-wrapper
         .manifiest_content_wrapper#manifiest_data: .manifiest_content
           .name
           .text
-        .fotorama
+        .fotorama#crewGallery
           ruby:
             def manifiest
               Dir.glob('img/manifiest/*').select{ |e| File.file? e }
@@ -70,4 +95,11 @@ html lang='en'
 
     footer
       h2 Магазин
-
+      .inner_wrapper
+        .leftside
+          .shop
+          img src="/img/logos.png"
+        .rightside
+          p.info Мы производим одежду из качественного сырья: принт остается ярким и после тысячи стирок, а ткань приятно ощущается на теле.<br/><br/>Шьем ограниченным тиражом на фабрике в Москве.
+          a.email href="mailto:craftman.info@gmail.com":span craftman.info@gmail.com
+          a.phone href="tel:+79652880399":span +7 (965) 288-03-99

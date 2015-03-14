@@ -6,13 +6,13 @@ window.lookbookItems = [{
   price: 1500
 }, {
   name: "Свитшот1",
-  descr: "Сделано из настоящей пиздливой кожи Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, neque, voluptas, sequi, ipsa accusamus nostrum mollitia adipisci expedita ut amet enim asperiores corporis vitae iusto veniam vero voluptatem commodi ratione. Porro facilis blanditiis quos repellendus beatae ducimus laudantium dolor eius?",
+  descr: "Сделано из настоящей пиздливой кожи Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, neque, voluptas, sequi, ipsa accusamus nostrum mollitia adipisci expedita ut amet enim asperiores corporis vitae iusto veniam vero voluptatem commodi ratione. Porro facilis blanditiis quos repellendus beatae ducimus laudantium dolor eius?Сделано из настоящей пиздливой кожи Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, neque, voluptas, sequi, ipsa accusamus nostrum mollitia adipisci expedita ut amet enim asperiores corporis vitae iusto veniam vero voluptatem commodi ratione. Porro facilis blanditiis quos repellendus beatae ducimus laudantium dolor eius?",
   pics: ['/img/lookbook/IMG_138rr22.jpg', '/img/lookbook/IMG_13r866.jpg'],
   sizes: ["s", "m", "l"],
   price: 1500
 }, {
   name: "Свитшот1",
-  descr: "Сделано из настоящей пиздливой кожи Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, neque, voluptas, sequi, ipsa accusamus nostrum mollitia adipisci expedita ut amet enim asperiores corporis vitae iusto veniam vero voluptatem commodi ratione. Porro facilis blanditiis quos repellendus beatae ducimus laudantium dolor eius?",
+  descr: "",
   pics: ['/img/lookbook/IMG_14f68.jpg'],
   sizes: ["s", "m", "l"],
   price: 2800
