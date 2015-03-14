@@ -181,7 +181,7 @@ $(function(jQuery) {
 			return resizeFotoramaText();
 		};
 	}).fotorama({
-		// nav: 'thumbs',
+		nav: 'thumbs',
 		fit: 'cover',
 		width: '100%',
 		ratio: '800/600',
