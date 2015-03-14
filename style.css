@@ -99,14 +99,14 @@ body {
 header {
   position: relative;
   width: 100%;
-  background: url(/img/header_bg.jpg) top right no-repeat;
+  background: url(img/header_bg.jpg) top right no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-height: 400px; }
   header.retina {
-    background-image: url(/img/header_bg@2x.jpg); }
+    background-image: url(img/header_bg@2x.jpg); }
   header .container {
     width: 90%;
     margin: 0 auto; }
@@ -115,13 +115,13 @@ header {
     header .top_level .logo {
       width: 160px;
       height: 96px;
-      background: url(/img/logo.png) no-repeat;
+      background: url(img/logo.png) no-repeat;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
       header .top_level .logo.retina {
-        background-image: url(/img/logo@2x.png); }
+        background-image: url(img/logo@2x.png); }
   header .bottom_level {
     position: absolute;
     bottom: 50px; }
@@ -167,19 +167,19 @@ header {
   -o-transition: all 3s ease-in-out;
   transition: all 3s ease-in-out; }
   .about .block.pic1 {
-    background: url(/img/descr1.jpg) top center no-repeat;
+    background: url(img/descr1.jpg) top center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
   .about .block.pic2 {
-    background: url(/img/descr2.jpg) top center no-repeat;
+    background: url(img/descr2.jpg) top center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
   .about .block.pic3 {
-    background: url(/img/descr3.jpg) top center no-repeat;
+    background: url(img/descr3.jpg) top center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -463,7 +463,7 @@ footer .inner_wrapper {
     footer .inner_wrapper .leftside img, footer .inner_wrapper .rightside img {
       max-width: 100%; }
   footer .inner_wrapper .leftside .shop {
-    background: url(/img/descr3.jpg) top center no-repeat;
+    background: url(img/descr3.jpg) top center no-repeat;
     height: 240px;
     -webkit-transition: all 4s ease-in-out;
     -moz-transition: all 4s ease-in-out;
