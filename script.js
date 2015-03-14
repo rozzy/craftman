@@ -88,7 +88,7 @@ $(function(jQuery) {
 		});
 		$('.__lookbookItemContainer').stop().fadeIn(500, function() {
 			$('.__lookbookItemContainer').find('.fotorama').fotorama({
-				nav: 'thumbs',
+				// nav: 'thumbs',
 				autoplay: 5000,
 				stopautoplayontouch: true,
 				width: '90%',
@@ -181,7 +181,7 @@ $(function(jQuery) {
 			return resizeFotoramaText();
 		};
 	}).fotorama({
-		// nav: 'thumbs',
+		nav: 'thumbs',
 		fit: 'cover',
 		width: '100%',
 		ratio: '800/600',
