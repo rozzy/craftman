@@ -75,7 +75,7 @@ $(function(jQuery) {
 		data.sizes.map(function(s, i) {
 			$('ul.sizes', el).append('<li>' + s + '</li>');
 		});
-		$('.__lookbookItemContainer').find('.fotorama').html('');
+		$('.__lookbookItemContainer').find('.fotorama').css('opacity', 0).html('');
 		data.pics.map(function(s, i) {
 			$('.__lookbookItemContainer').find('.fotorama').append('<img src="' + s + '"/>');
 		});
@@ -96,6 +96,7 @@ $(function(jQuery) {
 				allowFullscreen: true,
 				fit: 'scaledown'
 			});
+			$('.__lookbookItemContainer').find('.fotorama').css('opacity', 1);
 		});
 		return $('.__lookbookItemContainer > .lookbookItemOverlay').one('click', closeLookbookItem);
 	};
