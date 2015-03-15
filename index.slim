@@ -70,6 +70,7 @@ html lang='en'
               span.p
               span.rub ₽
             img.item src="#{item}"
+        /! LOOKBOOK END
     .manifiests
       h2 Тусовка
       p.crew
@@ -92,6 +93,7 @@ html lang='en'
             end
           - manifiest().each do |item|
             img src="#{item}" data-mid="#{File.basename(item, '.jpg')}"
+          /! MANIFIESTS END
 
     footer
       h2 Магазин
